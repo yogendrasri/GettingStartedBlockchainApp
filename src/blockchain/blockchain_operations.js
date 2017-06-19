@@ -20,7 +20,7 @@ module.exports = function(logger) {
 
     invokestartapp_cc.invoke_chaincode = function(obj, options) {
         return new Promise(function(resolve, reject) {
-            logger.debug('[fcw] Invoking Chaincode: ' + options.cc_function + '()');
+            logger.debug('Invoking Chaincode: ' + options.cc_function + '()');
             var eventhub;
             var chain = obj.chain;
             var nonce = utils.getNonce();
@@ -34,9 +34,9 @@ module.exports = function(logger) {
                 txId: chain.buildTransactionID(nonce, obj.submitter),
                 nonce: nonce,
             };
-            logger.debug('[fcw] Sending invoke req', request);
+            logger.debug('Sending invoke req', request);
             if (options.event_url) {
-                logger.debug('[fcw] listening to event url', options.event_url);
+                logger.debug('listening to event url', options.event_url);
                 eventhub = new EventHub();
                 eventhub.setPeerAddr(options.event_url, {
                     pem: options.peer_tls_opts.pem,
@@ -44,7 +44,7 @@ module.exports = function(logger) {
                 });
                 eventhub.connect();
             } else {
-                logger.debug('[fcw] will not use tx event');
+                logger.debug('will not use tx event');
             }
             chain.sendTransactionProposal(request)
                 .then(function(results) {
@@ -77,7 +77,7 @@ module.exports = function(logger) {
 
     invokestartapp_cc.query_chaincode = function(obj, options) {
         return new Promise(function(resolve, reject) {
-            logger.debug('[fcw] Querying Chaincode: ' + options.cc_function + '()');
+            logger.debug('Querying Chaincode: ' + options.cc_function + '()');
             var chain = obj.chain;
             var nonce = utils.getNonce();
             var request = {
@@ -144,7 +144,7 @@ module.exports = function(logger) {
         var member;
         return client.getUserContext(options.enroll_id).then((user) => {
             if (user && user.isEnrolled()) {
-                logger.info('[fcw] Successfully loaded member from persistence');
+                logger.info('Successfully loaded member from persistence');
                 return user;
             } else {
                 var tlsOptions = {
@@ -156,7 +156,7 @@ module.exports = function(logger) {
                     enrollmentID: options.enroll_id,
                     enrollmentSecret: options.enroll_secret
                 }).then((enrollment) => {
-                    logger.info('[fcw] Successfully enrolled user \'' + options.enroll_id + '\'');
+                    logger.info('Successfully enrolled user \'' + options.enroll_id + '\'');
                     member = new User(options.enroll_id, client);
                     return member.setEnrollment(enrollment.key, enrollment.certificate, options.msp_id);
                 }).then(() => {
@@ -164,7 +164,7 @@ module.exports = function(logger) {
                 }).then(() => {
                     return member;
                 }).catch((err) => {
-                    logger.error('[fcw] Failed to enroll and persist user. Error: ' + err.stack ? err.stack : err);
+                    logger.error('Failed to enroll and persist user. Error: ' + err.stack ? err.stack : err);
                     throw new Error('Failed to obtain an enrolled user');
                 });
             }
