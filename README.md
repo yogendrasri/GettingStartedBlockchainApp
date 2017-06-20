@@ -64,8 +64,8 @@
 	c. Test Delete Product:Same id used for create product
 <<<<<<< HEAD
 	Send POST request to url http://<application end point>/deleteProduct
-	Input Json
-			{
-			"id":"1"
+	Input Json</br>
+			{</br>
+			"id":"1"</br>
 			}   
 
