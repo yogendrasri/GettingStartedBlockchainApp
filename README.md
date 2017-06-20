@@ -5,7 +5,7 @@
 ## Local Deployment
 
 1. Downaload and Install Node and Google Postman plugin
-2. Clone the git URL <> to download the project.
+2. Clone the git URL https://github.com/yogendrasri/GettingStartedBlockchainApp.git to download the project.
 3. Go to chaincode at chaicode/src/startup/starterchaincode.go and get it deployed and initialize in Blockchain instance.
 4. Once chaincode successfully initialized, copy the credentail json from Blockchain UI Channel -> Chaincode and get the content paste in config/blockchain_creds.json.
 5. Go to the project root directory and run 'npm install' - This will download all the dependencies defined in package.json
@@ -15,30 +15,30 @@
 
 	a. Test Create Product:
 	Send POST request to url http://localhost:3001/createProduct
-	Input Json 
-			{
-			"id":"1", 
-			"item" : "TV",
-			"distributor" : "JK"
-			}
+	Input Json </br>
+			{</br>
+			"id":"1", </br>
+			"item" : "TV",</br>
+			"distributor" : "JK"</br>
+			}</br>
 	b. Test Get Product:Same id used for create product
 	Send POST request to url http://localhost:3001/getProduct
-	Input Json
-			{
-			"id":"1"
-			}  
+	Input Json</br>
+			{</br>
+			"id":"1"</br>
+			}</br>
 	c. Test Delete Product:Same id used for create product
 	Send POST request to url http://localhost:3001/deleteProduct
-	Input Json
-			{
-			"id":"1"
-			}  
+	Input Json</br>
+			{</br>
+			"id":"1"</br>
+			}</br>
 
 
 ## Bluemix Deployment
 
 1. Downaload and Install Node and Google Postman plugin
-2. Clone the git URL <> to download the project.
+2. Clone the git URL https://github.com/yogendrasri/GettingStartedBlockchainApp.git to download the project.
 3. Go to chaincode at chaicode/src/startup/starterchaincode.go and get it deployed and initialize in Blockchian instance.
 4. Once chaincode successfully initialized, copy the credentail json from Blockchain UI Channel -> Chaincode and get the content paste in confi/blockchain_creds.json.
 5. Go to the project root directory edit manifest.yml file, change host name to some unique name.
@@ -48,20 +48,21 @@
 9. Open Postman
 
 	a.Test Create Product:
-	Send POST request to url http://<application end point>/createProduct
-	Input Json 
-			{
-			"id":"1", 
-			"item" : "TV",
-			"distributor" : "JK"
-			}
+	Send POST request to url http://yourapplicationhost/createProduct
+	Input Json</br>
+			{</br>
+			"id":"1",</br>
+			"item" : "TV",</br>
+			"distributor" : "JK"</br>
+			}</br>
 	b. Test Get Product:Same id used for create product
-	Send POST request to url http://<application end point>/getProduct
-	Input Json
-			{
-			"id":"1"
-			}  
+	Send POST request to url http://yourapplicationhost/getProduct
+	Input Json</br>
+			{</br>
+			"id":"1"</br>
+			}</br>
 	c. Test Delete Product:Same id used for create product
+<<<<<<< HEAD
 	Send POST request to url http://<application end point>/deleteProduct
 	Input Json
 			{
@@ -148,3 +149,10 @@ Click on the below button to deploy this appication on button click
 			{
 			"id":"1"
 			}   
+=======
+	Send POST request to url http://yourapplicationhost/deleteProduct
+	Input Json</br>
+			{</br>
+			"id":"1"</br>
+			}</br>
+>>>>>>> 6d9ae2739d1d1569b42d3389d39d79ce83efe2b4
