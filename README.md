@@ -14,24 +14,24 @@
 8. Open Postman
 	a. Test Create Product:
 	Send POST request to url http://localhost:3001/createProduct
-	Input Json 
-			{
-			"id":"1", 
-			"item" : "TV",
-			"distributor" : "JK"
-			}
+	Input Json </br>
+			{</br>
+			"id":"1", </br>
+			"item" : "TV",</br>
+			"distributor" : "JK"</br>
+			}</br>
 	b. Test Get Product:Same id used for create product
 	Send POST request to url http://localhost:3001/getProduct
-	Input Json
-			{
-			"id":"1"
-			}  
+	Input Json</br>
+			{</br>
+			"id":"1"</br>
+			}</br>
 	c. Test Delete Product:Same id used for create product
 	Send POST request to url http://localhost:3001/deleteProduct
-	Input Json
-			{
-			"id":"1"
-			}  
+	Input Json</br>
+			{</br>
+			"id":"1"</br>
+			}</br>
 
 
 ## Bluemix Deployment
@@ -46,22 +46,22 @@
 8. Starter App contains three methods createProduct, getProduct, deleteProduct.
 9. Open Postman
 	a.Test Create Product:
-	Send POST request to url http://<application end point>/createProduct
-	Input Json 
-			{
-			"id":"1", 
-			"item" : "TV",
-			"distributor" : "JK"
-			}
+	Send POST request to url http://yourapplicationhost/createProduct
+	Input Json</br>
+			{</br>
+			"id":"1",</br>
+			"item" : "TV",</br>
+			"distributor" : "JK"</br>
+			}</br>
 	b. Test Get Product:Same id used for create product
-	Send POST request to url http://<application end point>/getProduct
-	Input Json
-			{
-			"id":"1"
-			}  
+	Send POST request to url http://yourapplicationhost/getProduct
+	Input Json</br>
+			{</br>
+			"id":"1"</br>
+			}</br>
 	c. Test Delete Product:Same id used for create product
-	Send POST request to url http://<application end point>/deleteProduct
-	Input Json
-			{
-			"id":"1"
-			}   
+	Send POST request to url http://yourapplicationhost/deleteProduct
+	Input Json</br>
+			{</br>
+			"id":"1"</br>
+			}</br>
